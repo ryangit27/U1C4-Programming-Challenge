@@ -42,11 +42,17 @@ public class Solution {
     }
 
     public String fizzString(String s1) {
-        String str = "";
+        String str = s1;
         if (s1.substring(0,1).equals("f")) {
+            if (str == s1) {
+                str = "";
+            }
             str += "Fizz";
         }
         if (s1.substring(s1.length()-1).equals("b")) {
+            if (str == s1) {
+                str = "";
+            }
             str += "Buzz";
         }
         return str;
@@ -60,7 +66,7 @@ public class Solution {
         if (x%5 == 0) {
             str += "Buzz";
         }
-        if (x%3 != 0 && x%3 != 0) {
+        if (x%3 != 0 && x%5 != 0) {
             str += x;
         }
         return str+"!";
